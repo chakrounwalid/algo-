@@ -1,0 +1,31 @@
+ALGORITHM compteur
+
+
+VAR
+
+mot,caractere,voyelles : INTEGER;
+phrase : String;
+mot:=0;caractere:=0;voyelles:=0;
+
+BEGIN
+
+Read(phrase)
+
+WHILE (phrase<>'.')DO
+
+IF (phrase='') THEN
+mot:=mot+1;
+
+else IF (phrase in ['a','e','i','o','u']) THEN
+voyelles:=voyelles+1;
+
+else
+caractere:=caractere+1;
+END_IF
+END_WHILE
+
+Write('nombre de mot =',mot)
+Write('nombre de caractere =',caractere)
+Write('nombre de voyelles =',voyelles)
+
+END
